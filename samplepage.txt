@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="canonical" href="http://vandrico.com/device/3l-labs-footlogger" />
+<link rel="shortlink" href="http://vandrico.com/node/246" />
+<link rel="shortcut icon" href="http://vandrico.com/sites/default/files/VandricoLogo-Icon-2013-small.png" type="image/png" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="image_src" href="http://vandrico.com/sites/default/files/3L%20Labs%20Footlogger.png" />
+<meta property="og:image" content="http://vandrico.com/sites/default/files/3L%20Labs%20Footlogger.png" />
+<meta content="3L Labs Footlogger" about="/device/3l-labs-footlogger" property="dc:title" />
+<meta about="/device/3l-labs-footlogger" property="sioc:num_replies" content="0" datatype="xsd:integer" />
+  <title>3L Labs Footlogger | Vandrico Inc</title>
+  <link type="text/css" rel="stylesheet" href="http://vandrico.com/sites/default/files/css/css_ogjvJnfni1_P_WxvXAHlUOgCs860b3ip9DNMapcIGeM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://vandrico.com/sites/default/files/css/css_9JYxT7bsU5XOgdrg1leP7bWvDSYLudm1DjjIoD--X1g.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://vandrico.com/sites/default/files/css/css_MnXiytJtb186Ydycnpwpw34cuUsHaKc80ey5LiQXhSY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://vandrico.com/sites/default/files/css/css_ojBq2VgZwbj_t5exiPKkWOPUVB_P4yqoGZxbCQ8dnI8.css" media="all" />
+  <script>window.google_analytics_uacct = "UA-23676048-1";</script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js'>\x3C/script>")</script>
+<script src="http://vandrico.com/sites/default/files/js/js_IkgOrrVZK1UTp2HktvFi5vo1g7b25Muyr5GoySikuic.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="http://vandrico.com/sites/default/files/js/js_R9UbiVw2xuTUI0GZoaqMDOdX0lrZtgX-ono8RVOUEVc.js"></script>
+<script src="http://vandrico.com/sites/default/files/js/js_4UN-VYlcY6hg-fcgFurVY5WW46zFcdKvbTyc3CeLsRQ.js"></script>
+<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-23676048-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();</script>
+<script src="http://vandrico.com/sites/default/files/js/js_2KlXA4Z5El1IQFVPxDN1aX5mIoMSFWGv3vwsP77K9yk.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"vandrico","theme_token":"5_A2cK-dqernVx3ByMZSoRFlpK60vxz9TG1Uyhm7tWc","js":{"0":1,"http:\/\/code.jquery.com\/jquery-1.8.2.min.js":1,"1":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/netdna.bootstrapcdn.com\/twitter-bootstrap\/2.3.2\/js\/bootstrap.min.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/themes\/Vandrico\/js\/main.js":1,"sites\/all\/themes\/Vandrico\/js\/rotate.js":1,"sites\/all\/themes\/Vandrico\/js\/twitter-feed.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/Vandrico\/js\/vandrico.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"\/\/netdna.bootstrapcdn.com\/twitter-bootstrap\/2.3.2\/css\/bootstrap-combined.min.css":1,"sites\/all\/themes\/bootstrap\/css\/overrides.css":1,"sites\/all\/themes\/Vandrico\/css\/animate.css":1,"sites\/all\/themes\/Vandrico\/css\/flexslider.css":1,"sites\/all\/themes\/Vandrico\/css\/font-awesome.min.css":1,"sites\/all\/themes\/Vandrico\/css\/main.css":1,"sites\/all\/themes\/Vandrico\/css\/custom-styles.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});</script>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-246 node-type-wearable-device" >
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-database">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/"><img src="/sites/all/themes/Vandrico/images/VDC-LogoMark-2013-White.png" alt="logo"></a>
+        <div class="nav-collapse collapse database">
+          <ul class="menu nav pull-right">
+          
+            <li class="leaf"><a href="/database/insights"  target="_self" title="Wearable Technology Report">Insights</a></li>
+            <li class="leaf"><a href="/database"  target="_self" title="Vandrico Wearable Device Database">Database Home</a></li>
+            <li class="leaf"><a href="/"  target="_self" title="Vandrico Wearable Tech Experts">Vandrico</a></li>
+            <li class="last leaf">
+              <div class='pull-right database-seachbox'><form class="search-form form-search pull-left content-search" action="/search/node" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="input-append"><input class="search-query span2 form-text" placeholder="Search" type="text" id="edit-keys" name="keys" value="" size="40" maxlength="255" /><button type="submit" class="btn"><i class="icon-search"></i><span class="element-invisible">Search</span></button></div><button class="element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+</div><input type="hidden" name="form_build_id" value="form-gn8Ebe-pCfOuyViu7tWpShoKHamtvtnZhVMpwW0952w" />
+<input type="hidden" name="form_id" value="search_form" />
+</div></form><div class="clearfix"></div></div>
+              <a class="small" href="/database/list" target="_self" title="List of Wearable Devices">Device List</a>
+            </li>
+          </ul>                                          
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<div id="content1">
+  <div class="container container-database">
+    <div class="row">
+      <section class="span12">  
+                        <a id="main-content"></a>
+                                        <h4>3L Labs Footlogger</h4>
+                                                                                      
+ 
+<article id="node-246" class="node node-wearable-device clearfix" about="/device/3l-labs-footlogger" typeof="sioc:Item foaf:Document">
+	
+			
+		<!--- MAIN ABOUT --->
+		<div class='row'>
+			<div class='span6'>
+        <div class='row'>
+          <div class='span4'>
+            <!-- LOCATION & ABOUT -->
+                          <h5>Body Location</h5>
+              <h6>Worn on the <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a></h6>
+                                      <h5>Primary Application</h5>
+              <h6><a href="/device-categories/application/fitness" title="Device mainly used for fitness applications" target="_self">Fitness</a> & <a href="/device-categories/application/medical" title="Device mainly used for medical applications" target="_self">Medical</a></h6>
+                      </div>
+        </div>
+         
+          <h5>About Footlogger</h5>
+          The 3L Labs Footlogger is a wearable fitness tracking device that aims at spotting health problems early, as well as logging daily activity. Placed in the user's shoe, 8 sensors coupled to 1 accelerometer help identify and record exercise habits. The data is then disclosed to the user via text or smartphone app. This computing device's technology can be used for athletes training, regular everyday workouts and rehabilitation.         			</div>
+			<div class='span3'>
+				<!-- QUICK FACTS -->
+				<h5>Company</h5>          
+				<h6>
+                    3L Labs        </h6>
+				<h5>Device Name</h5>
+				<h6>Footlogger</h6>
+				<h5>Consumer Release</h5>
+				<h6>Undisclosed</h6>
+				<h5>Price</h5>
+				<h6>
+									No Announcement Yet								</h6>
+			</div>
+			<div class='span3'>
+				<!-- IMAGE -->
+				<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/large/public/3L%20Labs%20Footlogger.png?itok=4135Fxm4" width="480" height="480" alt="" /></div></div></div>			</div>
+		</div>
+
+    <div class="row">
+      <div class="span6">
+        <!--- SOCIAL MEDIA & WEBSITE --->
+        <h5>Footlogger Network</h5>
+        <table class='device-social-menu'><tr><td><a href='http://footlogger.com/' target='_blank'><img src='/sites/all/themes/Vandrico/images/social/icon-sq-www.jpg'></a></td><td><a href='https://www.facebook.com/lm3labs?fref=ts' target='_blank'><img src='/sites/all/themes/Vandrico/images/social/icon-sq-fb.jpg'></a></td></table>        <BR>
+        
+        <!--- COMPONENTRY --->
+                  <h5>Componentry</h5>
+          <a href="/device-categories/components/pressure-sensor" title="The following devices include Pressure Sensors." target="_self">Pressure Sensor</a>          <BR><BR>
+                
+        <!--- POWER --->
+                  <h5>Power Source</h5>
+          <a href="/device-categories/power/rechargeable-battery" title="The following devices are powered by Rechargeable Batteries." target="_self">Rechargeable Battery</a>          <BR><BR>
+                
+        <!--- CONNECTIVITY --->
+                  <h5>Connectivity</h5>
+          <a href="/device-categories/connectivity/bluetooth" title="Device communicates using bluetooth." target="_self">Bluetooth</a>          <BR><BR>
+                
+        <!--- COMPATIBILITY --->
+                  <h5>Compatibility</h5>
+          <a href="/device-categories/compatibility/undisclosed" title="Device has not disclosed their compatibility." target="_self">Undisclosed</a>          <BR><BR>
+                
+        <!--- WORKPLACE BENEFITS --->
+                  <h5>Potential Workplace Benefits</h5>
+          <a href="/device-categories/workplace-benefits/health" title="These devices may improve a worker&#039;s Health within an organization." target="_self">Health</a>          <BR><BR>
+              </div>
+      <div class="span6">
+        <div class='radar-title'><h5>Relative Device Scores</h5></div>
+        <script src="/sites/all/themes/Vandrico/js/chart/Chart.js"></script>
+             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script><canvas id="radar" height="500" width="500"></canvas><script>
+          var radarChartData = {
+            labels : ["Compatibility","Components","Connectivity","Benefits","Uniqueness"],
+            datasets : [
+              {
+                fillColor : "rgba(82,96,143,0.5)",
+                strokeColor : "rgba(82,96,143,1)",
+                pointColor : "rgba(82,96,143,1)",
+                pointStrokeColor : "#fff",
+                data : [0,0.90909090909091,2.3076923076923,2.5454545454545,4.6324549237171]
+              },
+            ]  
+          }
+          
+          //Get the canvas & context 
+          var c = $("#radar");
+          var ct = c.get(0).getContext("2d");
+          var container = $(c).parent();
+
+          //Run function when browser resizes
+          $(window).resize( respondCanvas );
+
+          function respondCanvas(){ 
+              c.attr("width", $(container).width()); //max width
+              c.attr("height", $(container).width()); //max width
+              
+              //Call a function to redraw other content (texts, images etc)
+              var myRadar = new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 16, scaleOverride : true, scaleSteps : 5, scaleStepWidth: 2, scaleStartValue: 0});
+          }
+
+          //Initial call 
+          respondCanvas();
+
+        </script>      </div>
+    </div>
+    
+    <div class="row margin-40">
+      <div class="span6">
+        <!--- WORKPLACE POTENTIAL --->
+                  <h5>Workplace Potential Overview</h5>
+          <div class="field field-name-field-workplace-benefits-overvie field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">This device has a potential workplace benefit for health because it can help athletes develop an ideal weight placement during exercise, and can also be used in medicine for gait assessment, fall detection, exercise routine analysis and early prediction of dementia or spinal disease. </div></div></div>					<BR>
+        				<!--- SIMILAR DEVICES --->
+        <h5>Similar Devices</h5>
+         
+<article id="node-204" class="node node-wearable-device node-teaser clearfix" about="/device/moticon-opengo-science" typeof="sioc:Item foaf:Document">
+	
+				<!--- MAIN ABOUT --->
+		<table class='device-teaser'>
+			<tr>
+				<td class='left-img'>
+					<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/device/moticon-opengo-science"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/thumbnail/public/Moticon%20OpenGo%20Science.jpg?itok=PaThVhKv" width="100" height="100" alt="" /></a></div></div></div>				</td>
+				<td>
+					<h4 class='database-list-title' property="dc:title" datatype=""><a href="/device/moticon-opengo-science">Moticon OpenGo Science</a></h4>
+					<h6>
+											Worn on the <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a>										
+																		and used
+												for <a href="/device-categories/application/medical" title="Device mainly used for medical applications" target="_self">Medical</a> & <a href="/device-categories/application/fitness" title="Device mainly used for fitness applications" target="_self">Fitness</a> applications.
+										</h6>
+           
+            The Moticon OpenGo Science is a wearable device that measures plantar foot pressure for motion analysis. These wireless sensor insoles are...          				</td>
+			</tr>
+		</table>
+		<BR>
+  	 
+
+</article> <!-- /.node -->
+ 
+<article id="node-232" class="node node-wearable-device node-teaser clearfix" about="/device/xybermind-achillex" typeof="sioc:Item foaf:Document">
+	
+				<!--- MAIN ABOUT --->
+		<table class='device-teaser'>
+			<tr>
+				<td class='left-img'>
+					<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/device/xybermind-achillex"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/thumbnail/public/Xybermind%20Achillex_0.jpg?itok=W3GIJ226" width="100" height="100" alt="" /></a></div></div></div>				</td>
+				<td>
+					<h4 class='database-list-title' property="dc:title" datatype=""><a href="/device/xybermind-achillex">Xybermind Achillex</a></h4>
+					<h6>
+											Worn on the <a href="/device-categories/location/torso" title="Device is worn on the user&#039;s Torso." target="_self">Torso</a> & <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a>										
+																		and used
+												for <a href="/device-categories/application/fitness" title="Device mainly used for fitness applications" target="_self">Fitness</a> & <a href="/device-categories/application/medical" title="Device mainly used for medical applications" target="_self">Medical</a> applications.
+										</h6>
+           
+            The Xybermind Achillex is a complete wearable system that consists of an ankle wrap (placed around running shoes) and a vest. The Achillex...          				</td>
+			</tr>
+		</table>
+		<BR>
+  	 
+
+</article> <!-- /.node -->
+ 
+<article id="node-305" class="node node-wearable-device node-teaser clearfix" about="/device/geopalz-ibitz" typeof="sioc:Item foaf:Document">
+	
+				<!--- MAIN ABOUT --->
+		<table class='device-teaser'>
+			<tr>
+				<td class='left-img'>
+					<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/device/geopalz-ibitz"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/thumbnail/public/10280507.jpg?itok=t674KBEU" width="100" height="100" alt="" /></a></div></div></div>				</td>
+				<td>
+					<h4 class='database-list-title' property="dc:title" datatype=""><a href="/device/geopalz-ibitz">Geopalz iBitz</a></h4>
+					<h6>
+											Worn on the <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a> & <a href="/device-categories/location/waist" title="Device is worn on the user&#039;s Waist." target="_self">Waist</a>										
+																		and used
+												for <a href="/device-categories/application/fitness" title="Device mainly used for fitness applications" target="_self">Fitness</a> & <a href="/device-categories/application/medical" title="Device mainly used for medical applications" target="_self">Medical</a> applications.
+										</h6>
+           
+            The Geopalz iBitz is a wearable hi tech pedometer designed for adults and children. It originally measures the number of steps taken and...          				</td>
+			</tr>
+		</table>
+		<BR>
+  	 
+
+</article> <!-- /.node -->
+ 
+<article id="node-319" class="node node-wearable-device node-teaser clearfix" about="/device/lechal-shoe" typeof="sioc:Item foaf:Document">
+	
+				<!--- MAIN ABOUT --->
+		<table class='device-teaser'>
+			<tr>
+				<td class='left-img'>
+					<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/device/lechal-shoe"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/thumbnail/public/Lechal%20Shoe.png?itok=UG9GgBnO" width="100" height="100" alt="" /></a></div></div></div>				</td>
+				<td>
+					<h4 class='database-list-title' property="dc:title" datatype=""><a href="/device/lechal-shoe">Lechal Shoe</a></h4>
+					<h6>
+											Worn on the <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a>										
+																		and used
+												for <a href="/device-categories/application/fitness" title="Device mainly used for fitness applications" target="_self">Fitness</a> & <a href="/device-categories/application/lifestyle" title="Device mainly used for everyday tasks" target="_self">Lifestyle</a> applications.
+										</h6>
+           
+            The Lechal Shoe is wearable device that can navigate the user by using vibration. The Lechal Shoe can be replaced with any other shoes...          				</td>
+			</tr>
+		</table>
+		<BR>
+  	 
+
+</article> <!-- /.node -->
+ 
+<article id="node-282" class="node node-wearable-device node-teaser clearfix" about="/device/owlet-baby-monitor" typeof="sioc:Item foaf:Document">
+	
+				<!--- MAIN ABOUT --->
+		<table class='device-teaser'>
+			<tr>
+				<td class='left-img'>
+					<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/device/owlet-baby-monitor"><img typeof="foaf:Image" src="http://vandrico.com/sites/default/files/styles/thumbnail/public/305623.jpg?itok=2v-bxBzh" width="100" height="75" alt="" /></a></div></div></div>				</td>
+				<td>
+					<h4 class='database-list-title' property="dc:title" datatype=""><a href="/device/owlet-baby-monitor">Owlet Baby Monitor</a></h4>
+					<h6>
+											Worn on the <a href="/device-categories/location/feet" title="Device is worn on the user&#039;s Feet." target="_self">Feet</a>										
+																		and used
+												for <a href="/device-categories/application/medical" title="Device mainly used for medical applications" target="_self">Medical</a> & <a href="/device-categories/application/lifestyle" title="Device mainly used for everyday tasks" target="_self">Lifestyle</a> applications.
+										</h6>
+           
+            The Owlet Baby Monitor is designed for babies to detect heart rate, oxygen levels, skin temperature and sleep quality. The wearable device...          				</td>
+			</tr>
+		</table>
+		<BR>
+  	 
+
+</article> <!-- /.node -->
+      </div>
+      <div class="span6">
+        <!--- SECTOR ANALYSIS --->
+        <h5>Wearable Device Market</h5>
+        <div id="progress"><a href="/device-categories/application/entertainment">
+                  <div class="progress-bar bar-one">
+                    <div class="progress">
+                      <span class="field">Entertainment</span>
+                      <span class="field-value fade-in">30 Devices</span>
+                      <div style="width: 23%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/fitness">
+                  <div class="progress-bar primary bar-one">
+                    <div class="progress">
+                      <span class="field">Fitness</span>
+                      <span class="field-value fade-in">93 Devices</span>
+                      <div style="width: 73%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/gaming">
+                  <div class="progress-bar bar-two">
+                    <div class="progress">
+                      <span class="field">Gaming</span>
+                      <span class="field-value fade-in">17 Devices</span>
+                      <div style="width: 13%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/industrial">
+                  <div class="progress-bar bar-two">
+                    <div class="progress">
+                      <span class="field">Industrial</span>
+                      <span class="field-value fade-in">15 Devices</span>
+                      <div style="width: 12%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/lifestyle">
+                  <div class="progress-bar bar-three">
+                    <div class="progress">
+                      <span class="field">Lifestyle</span>
+                      <span class="field-value fade-in">128 Devices</span>
+                      <div style="width: 100%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/medical">
+                  <div class="progress-bar secondary bar-three">
+                    <div class="progress">
+                      <span class="field">Medical</span>
+                      <span class="field-value fade-in">47 Devices</span>
+                      <div style="width: 37%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a><a href="/device-categories/application/pets-animals">
+                  <div class="progress-bar bar-three">
+                    <div class="progress">
+                      <span class="field">Pets Animals</span>
+                      <span class="field-value fade-in">3 Devices</span>
+                      <div style="width: 2%;" class="bar"></div>
+                    </div>
+                  </div>
+                </a></div>        <div class='margin-60'></div>
+        <div class='custom-subscribe more-info'>
+          <center><h4 class='margin-20'>Looking for More Information?</h4></center>
+          <table>
+            <tbody>
+              <tr>
+                <td class="icon">
+                  <i class="icon-globe"></i>
+                </td>
+                <td>
+                  <h5>Interesting Facts</h5>
+                </td>
+              </tr>
+              <tr>
+                <td class="icon">
+                  <i class="icon-cogs"></i>
+                </td>
+                <td>
+                  <h5>Price Comparisons</h5>
+                </td>
+              </tr>
+              <tr>
+                <td class="icon">
+                  <i class="icon-dollar"></i>
+                </td>
+                <td>
+                  <h5>Component Comparisons</h5>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <BR><BR>
+          <center>
+            <a class="btn-main" id="btn-focus" href="/database/insights">
+              <i class="icon-chevron-right"></i> Access Insights
+            </a>
+          </center>
+          <BR>
+        </div>
+      </div>
+    </div>
+		
+    
+    
+    <div class='pull-right'>
+      3L Labs Footlogger page last updated 1 day ago.
+    </div>
+   
+
+</article> <!-- /.node -->
+      </section>
+
+            </div>
+    </div>
+  </div>
+</div>
+
+  <div class="region region-footer">
+    <section id="block-block-28" class="block block-block">
+
+      
+  
+<!--Bottom Section-->
+<section id="bottom" class="database">
+  <div class="container">
+    <div class="row margin-40">
+      <div class="span10 offset1 text-center">
+        <p>Found a missing device or improper information? <a href='/contact-us'>Let us know!</a></p>
+        <hr>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span10 offset1 text-center">
+        <!--Social Icons-->
+        <ul class="social-icons">
+          <li></li>
+          <li><a class="facebook" href="https://www.facebook.com/Vandrico.Inc" target="_blank"><i class="icon-facebook icon-3x"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com/vandrico_inc" target="_blank"><i class="icon-twitter icon-3x"></i></a></li>
+          <li><a class="linkedin" href="http://www.linkedin.com/company/vandrico-solutions" target="_blank"><i class="icon-linkedin icon-3x"></i></a></li>
+          <li><a class="google" href="https://plus.google.com/109216657941609470672/posts" target="_blank"><i class="icon-google-plus icon-3x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<section id="footer" class="database">
+  <div class="container">
+    <div class="row">
+      <div class="span12 text-center">
+        <p>&copy;2014 Vandrico Solutions Inc</p>
+        <p><a href='/' title='Wearable Technology Experts'>Home</a> | <a href='/about' title='Wearable Technology Experts'>About</a> | <a href='/research' title='Wearable Technology Research'>Research</a> | <a href='/development' title='Wearable Technology Development'>Development</a> | <a href='/consulting' title='Wearable Technology Consulting'>Consulting</a> | <a href='/blog' title='Vandrico Tech Blog'>Blog</a></p>
+        <p class="white"><a href='/privacy-policy' title='Vandrico Privacy Policy'>Privacy Policy</a></p>
+      </div>
+    </div>
+  </div>
+</section>  
+</section> <!-- /.block -->
+  </div>
+
+
+<script>
+  !function ($) {
+    $(function(){
+      $('#header').carousel()
+    })
+  }(window.jQuery)
+</script>
+
+<script>
+  $(document).ready(function (){
+    $("#btn-focus").click(function (){
+      $('html, body').animate({
+        scrollTop: $("#focus").offset().top
+      }, 1000);
+    });
+  });
+</script>
+  </body>
+</html>

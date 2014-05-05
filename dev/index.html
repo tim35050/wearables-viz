@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wearables Viz</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="navigation">
+        <h1>Navigation</h1>
+        <h2>Primary Application</h2>
+        <ul>
+            <li><a href="#">Fitness</a>
+            <li><a href="#">Lifestyle</a>
+            <li><a href="#">Medical</a>
+        </ul>
+        <!-- <h2>Body Location</h2>
+        <ul>
+            <li><a href="#">Head</a>
+            <li><a href="#">Ear</a>
+            <li><a href="#">Neck</a>
+            <li><a href="#">Shoulders</a>
+            <li><a href="#">Back</a>
+            <li><a href="#">Chest</a>
+            <li><a href="#">Arm</a>
+            <li><a href="#">Wrist</a>
+            <li><a href="#">Hand</a>
+            <li><a href="#">Fingers</a>
+            <li><a href="#">Torso</a>
+            <li><a href="#">Waist</a>
+            <li><a href="#">Thighs</a>
+            <li><a href="#">Legs</a>
+            <li><a href="#">Ankle</a>
+            <li><a href="#">Feet</a>
+        </ul> -->
+    </div>
+    <div id="viz"></div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+
+        $( "a" ).click(function() {
+            application = $(this).html();
+            //alert( $(this).html() );
+            svg.selectAll(".arc").each(function() {
+                g = d3.select(this);           
+                g.transition()
+                    .duration(500)
+                    .attr("opacity", function(d) {
+                        if (d.primary_applications.indexOf(application) > -1) {
+                            return 1;
+                        } else {
+                            return 0.15;
+                        }
+                    });
+            });
+        });
+
+        var width = 960,
+            height = 500,
+            radius = Math.min(width, height) / 2;
+
+        /* Animation Variables */
+        var fisheye_duration = 200;
+
+        var color = d3.scale.ordinal()
+            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(radius - 50)
+            .startAngle(function(d) {
+                return myScale(d.id - 1);
+            })
+            .endAngle(function(d) {
+                return myScale(d.id);
+            });
+
+        var selected_arc = d3.svg.arc()
+            .outerRadius(radius + 10)
+            .innerRadius(radius - 50)
+            .startAngle(function(d) {
+                return myScale(d.id - 1) - 0.01;
+            })
+            .endAngle(function(d) {
+                return myScale(d.id);
+            });
+
+        var selected_arc_sibling = d3.svg.arc()
+            .outerRadius(radius)
+            .innerRadius(radius - 50)
+            .startAngle(function(d) {
+                return myScale(d.id - 1);
+            })
+            .endAngle(function(d) {
+                return myScale(d.id);
+            });
+
+
+        var myScale = d3.scale.linear().domain([0, 209]).range([0, 2 * Math.PI]);
+
+        var svg = d3.select("#viz").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        d3.csv("products.csv", function(error, data) {
+
+            var g = svg.selectAll(".arc")
+                .data(data)
+                .enter().append("g")
+                .attr("class", "arc")
+                .on("mouseover", mouseover_path)
+                .on("mouseout", mouseout_path);
+
+
+            g.append("path")
+                .attr("d", arc)
+                .style("fill", function(d) { return color(0); } );
+
+          // g.append("text")
+          //     .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+          //     .attr("dy", ".35em")
+          //     .style("text-anchor", "middle")
+          //     .text(function(d) { return d.data.id; });
+
+        });
+
+        function mouseover_path(d) {
+            path_obj = get_path_from_group(this);
+            path_obj.transition()
+                    .ease("sin-out")
+                    .duration(fisheye_duration)
+                    .attr("d", selected_arc);
+        }
+
+        function mouseout_path(d) {
+            path_obj = get_path_from_group(this);
+            path_obj.transition()
+                    .ease("sin-out")
+                    .duration(fisheye_duration)
+                    .attr("d", arc);
+        }
+
+        function get_path_from_group(group) {
+            /* Don't think D3 shape stores siblings, so fisheye may be tough */
+            obj_this = d3.select(group)
+            path = obj_this[0][0].children;
+            path_obj = d3.select(path[0]);
+            return path_obj;
+        }
+    </script>
+</body>
+</html>
