@@ -1,11 +1,44 @@
 body {
-  font: 10px sans-serif;
+  font: 12px sans-serif;
 }
 
 .arc path {
   stroke: #fff;
 }
-
+text {
+	font-size: 8px;
+}
 #navigation {
 	float: left;
+}
+
+ul#applications {
+	padding-left: 0;
+}
+ul#applications li {
+	list-style-type: none;
+}
+
+ul#applications li a {
+	display: block;
+	background: #eeeeee;
+	padding: 5px 8px;
+	margin: 5px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.active {
+	color: #FFF !important;
+}
+.fitness.active {
+	background: #27235D !important;
+}
+
+.medical.active {
+	background: #A21D60 !important;
+}
+
+.lifestyle.active {
+	background: #692E8B !important;
 }
