@@ -25,10 +25,12 @@ $( "a" ).click(function() {
 function link_type_is(link,filter) {
     return link.attr("class").indexOf(filter) > -1;
 }
+
 function link_is_selected(link) {
     link_content = link.html().toLowerCase();
     return selected_links.indexOf(link_content) > -1;
 }
+
 function change_selection(link) {
     link_content = link.html().toLowerCase();
     selected_links = [];
@@ -45,6 +47,7 @@ function change_selection(link) {
         selected_links.push(link_content);
     }
 }
+
 function change_vitruvian() {
     var all_applications = ["fitness","lifestyle","medical"];
     for (var i=0; i < selected_applications.length; i++) {
@@ -79,55 +82,58 @@ function fade_in_vitruvian(application) {
         .duration(500)
         .attr("opacity",opacity);
 }
+
 function apply_filter(filter_type) {
     svg.selectAll(".arc").each(function() {
         g = d3.select(this);
         g.transition()
             .duration(500)
             .attr("opacity", function(d) {
-                if (selected_applications.length == 0) {
-                    if (filter_type == LOCATION) {
-                        if (selected_locations.length == 0) {
-                            return show_opacity;
-                        } else {
-                            if (is_filtered_by_location(d)) {
-                                return show_opacity;
-                            } else {
-                                return hide_opacity;
-                            }                            
-                        }
-                    }
+                if ((selected_applications.length == 0) && (selected_locations.length == 0)) {
                     return show_opacity;
-                } else {
-                    show_product_bool = false;
+                } else if ((selected_applications.length > 0) && (selected_locations.length == 0)) {
                     for (var i=0; i < selected_applications.length; i++) {
                         var application = selected_applications[i];
                         if (d.domain.toLowerCase().indexOf(application) > -1) {
-                            if (filter_type == LOCATION && selected_locations.length > 0) {
-                                show_product_bool = is_filtered_by_location(d);
-                            } else {
-                                show_product_bool = true;    
-                            }
+                            return show_opacity;
                         }
-                    }   
-                    if (show_product_bool) {
-                        return show_opacity;
-                    } else {
+                    }
+                    return hide_opacity;
+                } else if ((selected_applications.length == 0) && (selected_locations.length > 0)) {
+                    for (var i=0; i < selected_locations.length; i++) {
+                        var location = selected_locations[i];
+                        if (d.locations.toLowerCase().indexOf(location) > -1) {
+                            return show_opacity;
+                        }
+                    }
+                    return hide_opacity;
+                } else {
+                    is_filtered = true;
+                    for (var i=0; i < selected_applications.length; i++) {
+                        var application = selected_applications[i];
+                        if (d.domain.toLowerCase().indexOf(application) > -1) {
+                            is_filtered = false;
+                        }
+                    }
+                    if (is_filtered) {
+                        return hide_opacity;
+                    }
+                    is_filtered = true;
+                    for (var i=0; i < selected_locations.length; i++) {
+                        var location = selected_locations[i];
+                        if (d.locations.toLowerCase().indexOf(location) > -1) {
+                            is_filtered = false;
+                        }
+                    }
+                    if (is_filtered) {
                         return hide_opacity;
                     }
                 }
+                return show_opacity;
             });
     });
 }
-function is_filtered_by_location(d) {
-    for (var j=0; j < selected_locations.length; j++) {
-        var location = selected_locations[j];
-        if (d.locations.toLowerCase().indexOf(location) > -1) {
-            return true;
-        }
-    }
-    return false;
-}
+
 function initialize_vitruvian(application) {
     var opacity = 0;
     if (application == "default") {
@@ -174,8 +180,8 @@ g_product
 g_product
     .append("image")
         .attr("y", -240)
-        .attr("xlink:href", "/scraped_images/01-glassup-190713.jpg?itok=KxF7dbFT")
-        .attr("src", "/scraped_images/01-glassup-190713.jpg?itok=KxF7dbFT")
+        .attr("xlink:href", "/scraped_images/01-glassup.jpg")
+        .attr("src", "/scraped_images/01-glassup.jpg")
         .attr("width", 480)
         .attr("height", 480)
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + "),scale(0.4)")
