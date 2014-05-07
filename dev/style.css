@@ -12,14 +12,14 @@ text {
 	float: left;
 }
 
-ul#applications {
+ul#applications,ul#locations {
 	padding-left: 0;
 }
-ul#applications li {
+ul#applications li, ul#locations li {
 	list-style-type: none;
 }
 
-ul#applications li a {
+ul#applications li a, ul#locations li a {
 	display: block;
 	background: #eeeeee;
 	padding: 5px 8px;
@@ -36,9 +36,23 @@ ul#applications li a {
 }
 
 .medical.active {
-	background: #A21D60 !important;
+	background: #95278A !important;
 }
 
 .lifestyle.active {
 	background: #692E8B !important;
+}
+.location.active {
+	background: #333333 !important;
+}
+
+/* Product display */
+.product-title {
+	font-size: 18px;
+}
+.product-image {
+}
+.product-about {
+	font-size: 12px;
+	width:400px;
 }
