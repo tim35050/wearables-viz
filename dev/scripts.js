@@ -147,17 +147,20 @@ function unhighlight_location_dot(location) {
 }
 
 function apply_filter() {
+    var products_percent = 0;
     svg.selectAll(".arc").each(function() {
         g = d3.select(this);
         g.transition()
             .duration(500)
             .attr("opacity", function(d) {
                 if ((selected_applications.length == 0) && (selected_locations.length == 0)) {
+                    products_percent += 1
                     return show_opacity;
                 } else if ((selected_applications.length > 0) && (selected_locations.length == 0)) {
                     for (var i=0; i < selected_applications.length; i++) {
                         var application = selected_applications[i];
                         if (d.domain.toLowerCase().indexOf(application) > -1) {
+                            products_percent += 1
                             return show_opacity;
                         }
                     }
@@ -166,6 +169,7 @@ function apply_filter() {
                     for (var i=0; i < selected_locations.length; i++) {
                         var location = selected_locations[i];
                         if (d.locations.toLowerCase().indexOf(location) > -1) {
+                            products_percent += 1
                             return show_opacity;
                         }
                     }
@@ -192,9 +196,11 @@ function apply_filter() {
                         return hide_opacity;
                     }
                 }
+                products_percent += 1
                 return show_opacity;
             });
     });
+    update_products_percent(products_percent);
 }
 
 function initialize_vitruvian(application) {
@@ -414,7 +420,6 @@ function click_path(product) {
 
 function mouseover_vitruvian(d) {
     if (d3.select(this).attr("opacity") > 0) {
-        console.log("woohoooo");
         d3.select(this).selectAll("circle")
             .transition()
             .duration(200)
@@ -590,5 +595,9 @@ function transition_arrow(product) {
     }
 }
 
-
+function update_products_percent(num_selected) {
+    var percent_selected_products = num_selected / parseFloat(209) * 100;
+    percent_selected_products = Math.round(percent_selected_products * 10) / 10;
+    $('#percent-products').fadeIn().html(percent_selected_products.toString() + "%");
+}
 

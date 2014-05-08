@@ -88,3 +88,7 @@ ul#locations li a {
 .product-about {
 	font-size: 12px;
 }
+#percent-products {
+	font-weight: bold;
+	font-size: 30px;
+}
