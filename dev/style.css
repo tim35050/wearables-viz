@@ -1,5 +1,13 @@
 body {
   font: 12px sans-serif;
+  width: 100%;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 1010px;
 }
 
 .arc path {
@@ -14,6 +22,13 @@ body div {
 }
 #navigation, #product-info {
 	width: 180px;
+}
+
+#product-info {
+	background: #333333;
+	color: #FFFFFF;
+	padding: 10px;
+	height: 520px;
 }
 
 ul#applications,ul#locations {
