@@ -1,6 +1,7 @@
 var selected_applications = [];
 var selected_locations = [];
 var selected_product;
+var selected_product_title;
 var selected_arc_obj = null;
 var APPLICATION = "application";
 var LOCATION = "location";
@@ -12,6 +13,10 @@ var arc_color_click = "#666666";
 var location_dot_radius = 1;
 var location_dot_radius_hover = 5;
 var location_dot_radius_glow = 3;
+var width = 600,
+    height = 550,
+    radius = Math.min(width, height) / 2;
+var innerRadius = radius - 60;
 
 $( "a" ).click(function() {
     // Find out the type of filter that was clicked from the element's style
@@ -19,6 +24,9 @@ $( "a" ).click(function() {
     change_selection(link);
     if (link_type_is(link, APPLICATION)) {
         change_vitruvian();
+    }
+    if (link_type_is(link, LOCATION)) {
+        change_location_dots();
     }
     apply_filter();
 });
@@ -66,6 +74,18 @@ function change_vitruvian() {
     }
 }
 
+function change_location_dots() {
+    var all_locations = ["body","head","ear","neck","shoulders","back","chest","arm","wrist","hand","fingers","torso","waist","thighs","legs","ankle","feet"];
+    for (var i=0; i < selected_locations.length; i++) {
+        var location = selected_locations[i];
+        all_locations.splice(all_locations.indexOf(location), 1);
+        highlight_location_dot(location);
+    }
+    for (var i=0; i < all_locations.length; i++) {
+        unhighlight_location_dot(all_locations[i]);
+    }
+}
+
 function fade_out_vitruvian(application) {
     d3.select("svg").select("svg#" + application)
         .transition()
@@ -88,6 +108,25 @@ function fade_in_vitruvian(application) {
         .transition()
         .duration(500)
         .attr("opacity",opacity);
+}
+
+function highlight_location_dot(location) {
+    d3.selectAll("circle." + location).attr("r", function(d) {
+        return location_dot_radius_hover;
+    });
+}
+
+function unhighlight_location_dot(location) {
+    d3.selectAll("circle." + location).attr("r", function() {
+        var applicable_locations = $(this).attr("class").split(" ");
+        for (var k=0; k < applicable_locations.length; k++) {
+            var applicable_location = applicable_locations[k];
+            if (selected_locations.indexOf(applicable_location) > -1) {
+                return location_dot_radius_hover;
+            }
+        }
+        return location_dot_radius;
+    });
 }
 
 function apply_filter() {
@@ -161,9 +200,6 @@ function initialize_vitruvian(application) {
         .on("click", click_location_dot);
 }
 
-var width = 600,
-    height = 550,
-    radius = Math.min(width, height) / 2;
 
 var fisheye_duration = 200;
 var color = d3.scale.ordinal()
@@ -221,8 +257,8 @@ initialize_vitruvian("lifestyle");
 var myScale = d3.scale.linear().domain([0, 209]).range([0, 2 * Math.PI]);
 
 var arc = d3.svg.arc()
-    .outerRadius(radius - 20)
-    .innerRadius(radius - 60)
+    .outerRadius(radius - 30)
+    .innerRadius(innerRadius)
     .startAngle(function(d) {
         return myScale(d.location_id - 1);
     })
@@ -231,17 +267,28 @@ var arc = d3.svg.arc()
     });
 
 var selected_arc = d3.svg.arc()
-    .outerRadius(radius)
-    .innerRadius(radius - 60)
+    .outerRadius(radius - 10)
+    .innerRadius(innerRadius)
     .startAngle(function(d) {
         return myScale(d.location_id - 1) - 0.01;
     })
     .endAngle(function(d) {
-        return myScale(d.location_id);
+        return myScale(d.location_id) + 0.01;
+    });
+
+var clicked_arc = d3.svg.arc()
+    .outerRadius(radius)
+    .innerRadius(innerRadius)
+    .startAngle(function(d) {
+        return myScale(d.location_id - 1) - 0.06;
+    })
+    .endAngle(function(d) {
+        return myScale(d.location_id) + 0.06;
     });
 
 svg = svg.append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class","arcs");
 
 d3.csv("products_modified_rev2.csv", function(error, data) {
 
@@ -267,7 +314,7 @@ function mouseover_path(d) {
     obj_this = d3.select(this)
     corrected_opacity = Math.round(obj_this.attr("opacity")*100) / 100;
     if ( (corrected_opacity != hide_opacity) && (d.id != selected_product) ) {
-        show_product_title(d);
+        show_product_title(d.title);
         highlight_body_location(d);
         path_obj = get_path_from_group(this);
         path_obj
@@ -275,7 +322,13 @@ function mouseover_path(d) {
             .transition()
             .ease("sin-out")
             .duration(fisheye_duration)
-            .attr("d", selected_arc);        
+            .attr("d", selected_arc);
+
+        // Move clicked arc to top
+        detached_path = $(this).detach();
+        $("g.arcs").append(detached_path);      
+        // Move to second place to not be hidden behind clicked
+        //detached_path.insertAfter($("g.arcs").children()[0]);
     }
 }
 
@@ -292,6 +345,42 @@ function mouseout_path(d) {
             .ease("sin-out")
             .duration(fisheye_duration)
             .attr("d", arc);
+    }
+}
+
+function click_path(product) {
+    hide_product();
+    // Make sure you're not re-showing an un-selected product
+    if (selected_product != product.id) {
+        selected_product = product.id;
+        selected_product_title = product.title;
+        path_obj = get_path_from_group(this);
+        selected_arc_obj = path_obj;
+        path_obj.transition()
+                .duration(200)
+                .style("fill", arc_color_click)
+                .attr("d", clicked_arc);
+
+        d3.select(this)
+            .append("text")
+            .attr("text-anchor","middle")
+            .attr("stroke","#FFFFFF")
+            .text("close")
+            .attr("transform", function(d) {
+                startAngle = myScale(d.location_id - 1) - 0.06;
+                endAngle = myScale(d.location_id) + 0.06;
+                d.angle = (startAngle + endAngle) / 2;
+                return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + " translate(" + (innerRadius + 45) + ")" + ((d.angle > Math.PI / 2) && (d.angle < 3 * Math.PI / 2) ? "rotate(270)" : " rotate(90)");
+            })
+            .attr("text-anchor", function(d) {
+                return d.angle > Math.PI ? "middle" : "middle";
+            });;
+        
+        // Move clicked arc to bottom
+        detached_path = $(this).detach();
+        $("g.arcs").prepend(detached_path);
+
+        show_product(product);
     }
 }
 
@@ -354,6 +443,10 @@ function click_location_dot(d) {
             if ($(this).attr("class").indexOf("active") == -1) {
                 $(this).addClass($(this).attr("class") + " active");
                 selected_locations.push(atext); 
+            } else {
+                // Link already enabled, so we're trying to disable
+                $(this).removeClass("active");
+                selected_locations.splice(selected_locations.indexOf(atext), 1);
             }
         }
     });
@@ -368,20 +461,6 @@ function click_location_dot(d) {
     // }
 }
 
-function click_path(product) {
-    hide_product();
-    // Make sure you're not re-showing an un-selected product
-    if (selected_product != product.id) {
-        selected_product = product.id;
-        path_obj = get_path_from_group(this);
-        selected_arc_obj = path_obj;
-        path_obj.transition()
-                .duration(200)
-                .style("fill", arc_color_click);
-        show_product(product);
-    }
-}
-
 function get_path_from_group(group) {
     /* Don't think D3 shape stores siblings, so fisheye may be tough */
     obj_this = d3.select(group)
@@ -389,13 +468,13 @@ function get_path_from_group(group) {
     path_obj = d3.select(path[0]);
     return path_obj;
 }
-function show_product_title(d) {
+function show_product_title(title) {
     d3.select("#wheel-viz")
         .append("use").attr("xlink:href","#textpath");
     d3.select("#wheel-viz")
         .append("text").attr("x",0).attr("y",100).attr("class","product-title hover-title").attr("text-anchor", "middle")
         .append("textPath").attr("xlink:href","#textpath").attr("startOffset","50%")
-        .html(d.title);
+        .html(title);
 }
 function highlight_body_location(d) {
     var split_locations = d.locations.split(",");
@@ -430,17 +509,14 @@ function hide_product() {
             .ease("sin-out")
             .duration(fisheye_duration)
             .attr("d", arc);        
+        $(selected_arc_obj[0][0]).siblings().remove();
     }
-    g_product = d3.select("g.product")
-        .transition()
-        .duration(500)
-        .attr("opacity",0);
+
+    //selected_product = 0;
+    selected_product_title = "";
 }
 function show_product(product) {
-    div_product = d3.select("div.product-content")
-        .transition()
-        .duration(500)
-        .attr("opacity",1);
+    //$("product-info").fadeIn();
 
     div_product
         .select("h1.product-title")
