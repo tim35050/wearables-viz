@@ -8,8 +8,12 @@ body {
 text {
 	font-size: 8px;
 }
-#navigation {
-	float: left;
+body div {
+	display: inline-block;
+	vertical-align: top;
+}
+#navigation, #product-info {
+	width: 180px;
 }
 
 ul#applications,ul#locations {
@@ -19,8 +23,22 @@ ul#applications li, ul#locations li {
 	list-style-type: none;
 }
 
-ul#applications li a, ul#locations li a {
+ul#applications li a {
 	display: block;
+	background: #eeeeee;
+	padding: 5px 8px;
+	margin: 5px;
+	text-decoration: none;
+	color: #000000;
+}
+
+ul#locations li {
+	display: inline-block;
+	line-height: 30px;
+}
+
+ul#locations li a {
+	
 	background: #eeeeee;
 	padding: 5px 8px;
 	margin: 5px;
@@ -54,5 +72,4 @@ ul#applications li a, ul#locations li a {
 }
 .product-about {
 	font-size: 12px;
-	width:400px;
 }
