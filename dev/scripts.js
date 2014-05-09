@@ -71,11 +71,17 @@ function change_vitruvian() {
         fade_out_vitruvian(all_applications[i]);
     }
     if (selected_applications.length > 0) {
-        //if (!(selected_applications.length == 1 && selected_applications[0] == "medical")) {
+        if ((selected_applications.length == 1 && selected_applications[0] == "medical")) {
+            fade_in_vitruvian("default");
+        } else {
             fade_out_vitruvian("default");
-        //}
+        }
     } else {
         fade_in_vitruvian("default");
+    }
+    // Always keep medical at the top
+    if(selected_applications.indexOf("medical") > -1) {
+        fade_in_vitruvian("medical");
     }
 }
 
