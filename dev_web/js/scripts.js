@@ -633,7 +633,7 @@ function show_product(product) {
 function transition_arrow(product) {
     if (product == null) {
         // Product unselected - fade out arrow.
-        d3.select("rect")
+        d3.select("rect.selected_product_arrow")
             .transition()
             .duration(200)
             .attr("opacity",0);
@@ -648,15 +648,12 @@ function transition_arrow(product) {
         var y_indicator = Math.cos(angle) * outerRadius;
         var y = height / 2 - y_indicator - arrow_rect_side * Math.sqrt(2) / 2;
 
-        console.log("translate(" + String(arrow_x_translate) + "," + String(y) + ") rotate(45)");
-        console.log(d3.select("rect").attr("transform"));
-        d3.select("rect")
+        d3.select("rect.selected_product_arrow")
             .transition()
             .duration(300)
             .attr("transform","translate(" + String(arrow_x_translate) + "," + String(y) + ") rotate(45)")
             .attr("opacity",1);
 
-        console.log(d3.select("rect").attr("transform"));
     }
 }
 

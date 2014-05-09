@@ -652,6 +652,8 @@ function transition_arrow(product) {
             .duration(300)
             .attr("transform","translate(" + String(arrow_x_translate) + "," + String(y) + ") rotate(45)")
             .attr("opacity",1);
+
+        console.log(d3.select("rect").attr("transform"));
     }
 }
 
