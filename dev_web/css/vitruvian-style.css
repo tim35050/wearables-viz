@@ -1,0 +1,155 @@
+body {
+  font: 12px sans-serif;
+  width: 100%;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 960px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.arc path {
+  stroke: #fff;
+}
+text {
+	font-size: 8px;
+}
+body div {
+	display: inline-block;
+	vertical-align: top;
+}
+#navigation, #product-info {
+	width: 180px;
+}
+
+.product-content {
+	text-align: left !important;
+}
+
+.product-content h2 {
+	color: #fff !important;
+}
+
+#product-info {
+	background: #666666;
+	color: #FFFFFF;
+	padding: 0 12px;
+	height: 540px;
+	margin: 0.83em 0;
+}
+
+ul#applications,ul#locations {
+	padding-left: 0;
+}
+ul#applications li, ul#locations li {
+	list-style-type: none;
+}
+
+ul#applications li a {
+	display: block;
+	background: #eeeeee;
+	padding: 10px 16px;
+	margin: 5px 0;
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+	font-family: 'Bree Serif', serif;
+	font-size: 16px;
+}
+
+ul#locations {
+	text-align: left !important;
+}
+
+ul#locations li {
+	display: inline-block;
+	line-height: 31px;
+}
+
+ul#locations li a {
+	background: #eeeeee;
+	padding: 5px 8px;
+	margin: 5px 5px 5px 0;
+	text-decoration: none;
+	color: #000000;
+}
+
+.active {
+	color: #FFF !important;
+}
+.fitness.active {
+	background: rgba(39,35,93,0.5) !important; /*#27235D*/
+}
+
+.medical.active {
+	background: rgba(149,39,138,0.5) !important; /* #95278A*/
+}
+
+.lifestyle.active {
+	background: rgba(105,46,139,0.5) !important; /*#692E8B*/
+}
+.location.active {
+	background: #333333 !important;
+}
+
+/* Product display */
+#product-info a {
+	text-align: left !important;
+}
+.product-default {
+	text-align: left;
+}
+.product-default h2 {
+	color: #fff;
+}
+.product-image {
+	width: 156px;
+    height: 90px;
+    background-position: center center;
+    background-size: 180px auto;
+    margin-bottom: 10px;
+}
+.product-about {
+	text-align: left !important;
+	font-size: 12px;
+	width: 156px;
+	display: block;
+}
+#percent-products {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.product-title {
+	text-align: left !important;
+	width: 148px;
+	font-family: 'Bree Serif', serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+.product-feature-title {
+	text-align: left !important;
+	margin: 10px 0 2px 0;
+	font-size: 14px;
+	display: block;
+}
+.product-feature-text {
+	text-align: left !important;
+	width: 180px;
+	display: block;
+}
+.close-tab {
+	font-size: 10px;
+}
+#container h2 {
+	text-transform: none;
+	text-align: left;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0.83em 0;
+}

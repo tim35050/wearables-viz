@@ -4,38 +4,39 @@
     <title>Wearables Viz</title>
     <meta charset="utf-8">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div id="container">
         <div id="navigation">
-            <h1>Navigation</h1>
-            <h2>Primary Application</h2>
+            <h2>Domain</h2>
             <ul id="applications">
-                <li><a href="#" class="application fitness">Fitness</a>
-                <li><a href="#" class="application lifestyle">Lifestyle</a>
-                <li><a href="#" class="application medical">Medical</a>
+                <li><a href="#" onclick="return false;" class="application fitness active">Fitness</a>
+                <li><a href="#" onclick="return false;" class="application lifestyle active">Lifestyle</a>
+                <li><a href="#" onclick="return false;" class="application medical active">Medical</a>
             </ul>
             <h2>Location Worn</h2>
             <ul id="locations">
-                <li><a href="#" class="location">Body</a>
-                <li><a href="#" class="location">Head</a>
-                <li><a href="#" class="location">Ear</a>
-                <li><a href="#" class="location">Neck</a>
-                <li><a href="#" class="location">Shoulders</a>
-                <li><a href="#" class="location">Back</a>
-                <li><a href="#" class="location">Chest</a>
-                <li><a href="#" class="location">Arm</a>
-                <li><a href="#" class="location">Wrist</a>
-                <li><a href="#" class="location">Hand</a>
-                <li><a href="#" class="location">Fingers</a>
-                <li><a href="#" class="location">Torso</a>
-                <li><a href="#" class="location">Waist</a>
-                <li><a href="#" class="location">Thighs</a>
-                <li><a href="#" class="location">Legs</a>
-                <li><a href="#" class="location">Ankle</a>
-                <li><a href="#" class="location">Feet</a>
+                <li><a href="#" onclick="return false;" class="location">Body</a>
+                <li><a href="#" onclick="return false;" class="location">Head</a>
+                <li><a href="#" onclick="return false;" class="location">Ear</a>
+                <li><a href="#" onclick="return false;" class="location">Neck</a>
+                <li><a href="#" onclick="return false;" class="location">Shoulders</a>
+                <li><a href="#" onclick="return false;" class="location">Back</a>
+                <li><a href="#" onclick="return false;" class="location">Chest</a>
+                <li><a href="#" onclick="return false;" class="location">Arm</a>
+                <li><a href="#" onclick="return false;" class="location">Wrist</a>
+                <li><a href="#" onclick="return false;" class="location">Hand</a>
+                <li><a href="#" onclick="return false;" class="location">Fingers</a>
+                <li><a href="#" onclick="return false;" class="location">Torso</a>
+                <li><a href="#" onclick="return false;" class="location">Waist</a>
+                <li><a href="#" onclick="return false;" class="location">Thighs</a>
+                <li><a href="#" onclick="return false;" class="location">Legs</a>
+                <li><a href="#" onclick="return false;" class="location">Ankle</a>
+                <li><a href="#" onclick="return false;" class="location">Feet</a>
             </ul>
-            <h2>Percent of Products</h2>
+            <h2>Percent Displayed</h2>
             <div id="percent-products">100%</div>
         </div><div id="viz">
             <svg id="wheel-viz">
@@ -380,7 +381,7 @@
             </svg>
         </div><div id="product-info">
             <div class="product-default">
-                <em>No product selected</em>
+                <h2>No product selected</h2>
                 <p>Click along the wheel to discover wearable technology products</p>
             </div>
             <div class="product-content" style="display:none">

@@ -1,0 +1,94 @@
+body {
+  font: 12px sans-serif;
+  width: 100%;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 1010px;
+}
+
+.arc path {
+  stroke: #fff;
+}
+text {
+	font-size: 8px;
+}
+body div {
+	display: inline-block;
+	vertical-align: top;
+}
+#navigation, #product-info {
+	width: 180px;
+}
+
+#product-info {
+	background: #333333;
+	color: #FFFFFF;
+	padding: 10px;
+	height: 520px;
+}
+
+ul#applications,ul#locations {
+	padding-left: 0;
+}
+ul#applications li, ul#locations li {
+	list-style-type: none;
+}
+
+ul#applications li a {
+	display: block;
+	background: #eeeeee;
+	padding: 5px 8px;
+	margin: 5px;
+	text-decoration: none;
+	color: #000000;
+}
+
+ul#locations li {
+	display: inline-block;
+	line-height: 30px;
+}
+
+ul#locations li a {
+	
+	background: #eeeeee;
+	padding: 5px 8px;
+	margin: 5px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.active {
+	color: #FFF !important;
+}
+.fitness.active {
+	background: #27235D !important;
+}
+
+.medical.active {
+	background: #95278A !important;
+}
+
+.lifestyle.active {
+	background: #692E8B !important;
+}
+.location.active {
+	background: #333333 !important;
+}
+
+/* Product display */
+.product-title {
+	font-size: 18px;
+}
+.product-image {
+}
+.product-about {
+	font-size: 12px;
+}
+#percent-products {
+	font-weight: bold;
+	font-size: 30px;
+}

@@ -8,6 +8,7 @@ body {
 	margin-right: auto;
 	display: block;
 	width: 1010px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .arc path {
@@ -25,10 +26,11 @@ body div {
 }
 
 #product-info {
-	background: #333333;
+	background: #666666;
 	color: #FFFFFF;
-	padding: 10px;
-	height: 520px;
+	padding: 0 16px;
+	height: 540px;
+	margin: 0.83em 0;
 }
 
 ul#applications,ul#locations {
@@ -41,22 +43,24 @@ ul#applications li, ul#locations li {
 ul#applications li a {
 	display: block;
 	background: #eeeeee;
-	padding: 5px 8px;
-	margin: 5px;
+	padding: 10px 16px;
+	margin: 5px 0;
 	text-decoration: none;
 	color: #000000;
+	text-transform: uppercase;
+	font-family: 'Bree Serif', serif;
+	font-size: 14px;
 }
 
 ul#locations li {
 	display: inline-block;
-	line-height: 30px;
+	line-height: 31px;
 }
 
 ul#locations li a {
-	
 	background: #eeeeee;
 	padding: 5px 8px;
-	margin: 5px;
+	margin: 5px 5px 5px 0;
 	text-decoration: none;
 	color: #000000;
 }
@@ -65,30 +69,58 @@ ul#locations li a {
 	color: #FFF !important;
 }
 .fitness.active {
-	background: #27235D !important;
+	background: rgba(39,35,93,0.5) !important; /*#27235D*/
 }
 
 .medical.active {
-	background: #95278A !important;
+	background: rgba(149,39,138,0.5) !important; /* #95278A*/
 }
 
 .lifestyle.active {
-	background: #692E8B !important;
+	background: rgba(105,46,139,0.5) !important; /*#692E8B*/
 }
 .location.active {
 	background: #333333 !important;
 }
 
 /* Product display */
-.product-title {
-	font-size: 18px;
-}
 .product-image {
+	width: 180px;
+    height: 90px;
+    background-position: center center;
+    background-size: 180px auto;
 }
 .product-about {
 	font-size: 12px;
+	width: 180px;
+	display: block;
 }
 #percent-products {
 	font-weight: bold;
 	font-size: 30px;
+}
+
+.product-title {
+	width: 148px;
+	font-family: 'Bree Serif', serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+.product-feature-title {
+	margin: 10px 0 2px 0;
+	font-size: 14px;
+	display: block;
+}
+.product-feature-text {
+	width: 180px;
+	display: block;
+}
+.close-tab {
+	font-size: 10px;
+}
+#container h2 {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0.83em 0;
 }
